@@ -26,3 +26,16 @@ The CLAUDE.md should tell Claude how to work in this repo:
 - remind me to commit after each completed slice
 
 Make it specific to this assessment and this stack.
+
+## Environment File Behavior
+
+Use `.env.example` as the committed template.
+
+Do not run the app directly from `.env.example`. The evaluator should copy `.env.example` to `.env` and fill in real values.
+
+Rules:
+- `.env.example` is safe to commit and contains placeholders only.
+- `.env` contains real local values and must never be committed.
+- Read `DATABASE_URL` from `process.env.DATABASE_URL`.
+- Read `EXPO_PUBLIC_API_URL` from Expo public environment variables.
+- If `DATABASE_URL` is missing, fail fast with a clear setup error telling the user to copy `.env.example` to `.env`.
