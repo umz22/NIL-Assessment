@@ -29,6 +29,10 @@ build/
 *.key
 *.mobileprovision
 
+# Generated native directories (created by expo prebuild / expo run)
+apps/mobile/android/
+apps/mobile/ios/
+
 # logs
 npm-debug.log*
 yarn-debug.log*
