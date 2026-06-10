@@ -44,3 +44,7 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 .idea/
+
+# Claude Code memory
+memory/
+MEMORY.md
